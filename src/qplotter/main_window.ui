@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1218</width>
+    <height>910</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>QPlotter</string>
+  </property>
+  <widget class="QWidget" name="cw">
+   <layout class="QHBoxLayout" name="horizontalLayout_2">
+    <item>
+     <widget class="QTabWidget" name="mainTabs">
+      <property name="currentIndex">
+       <number>2</number>
+      </property>
+      <widget class="QWidget" name="surokMarksTab">
+       <attribute name="title">
+        <string>Surok marks</string>
+       </attribute>
+       <layout class="QHBoxLayout" name="horizontalLayout_6"/>
+      </widget>
+      <widget class="QWidget" name="surokPreprocessingTab">
+       <attribute name="title">
+        <string>Surok preprocessing</string>
+       </attribute>
+       <layout class="QHBoxLayout" name="horizontalLayout_7"/>
+      </widget>
+      <widget class="QWidget" name="drawPointsTab">
+       <attribute name="title">
+        <string>Draw Points</string>
+       </attribute>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1218</width>
+     <height>42</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionExit"/>
+   </widget>
+   <widget class="QMenu" name="menuInformation">
+    <property name="title">
+     <string>Charts</string>
+    </property>
+    <widget class="QMenu" name="menuSurok_marks">
+     <property name="title">
+      <string>Surok marks</string>
+     </property>
+     <addaction name="actionAzimuth"/>
+     <addaction name="actionDistance"/>
+     <addaction name="actionVelocity"/>
+     <addaction name="actionElevation"/>
+    </widget>
+    <addaction name="menuSurok_marks"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuInformation"/>
+  </widget>
+  <action name="actionExit">
+   <property name="text">
+    <string>Quit</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+  </action>
+  <action name="actionAzimuth">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Azimuth</string>
+   </property>
+  </action>
+  <action name="actionDistance">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Range</string>
+   </property>
+  </action>
+  <action name="actionVelocity">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Speed</string>
+   </property>
+  </action>
+  <action name="actionElevation">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Elevation</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
